@@ -1,5 +1,6 @@
 import random
 
+
 class ActionBase:
     def __init__(self, name, value_range, is_positive):
         self.name = name

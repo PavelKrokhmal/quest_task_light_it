@@ -5,6 +5,7 @@ from .base_controller import BaseController
 
 from actions import ActionEnemy, ActionOwnUse
 
+
 class BotController(BaseController):
 
     CONST_LOW_HP_PERCENT = 35
@@ -21,8 +22,7 @@ class BotController(BaseController):
 
         return list(
             filter(
-                lambda action: isinstance(action, ActionOwnUse),
-                self.actions.values(),
+                lambda action: isinstance(action, ActionOwnUse), self.actions.values(),
             )
         )
 

@@ -1,5 +1,6 @@
 from ..action_own_use import ActionOwnUse
 
+
 class Healing(ActionOwnUse):
     def __init__(
         self,

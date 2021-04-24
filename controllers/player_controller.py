@@ -3,6 +3,7 @@ from utils import wait_for_correct_key
 
 from actions import ActionOwnUse
 
+
 class PlayerController(BaseController):
     def __init__(self, player, actions):
         super().__init__(player, actions)
@@ -23,7 +24,7 @@ class PlayerController(BaseController):
     def get_selected_action(self):
         print(" Available actions:")
         print(self.get_actions())
-        
-        return self.actions[int(wait_for_correct_key(" Your action: ", self.get_string_actions_keys()))]
 
-
+        return self.actions[
+            int(wait_for_correct_key(" Your action: ", self.get_string_actions_keys()))
+        ]

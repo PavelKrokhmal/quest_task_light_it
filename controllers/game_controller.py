@@ -3,6 +3,7 @@ from .action_controller import ActionController
 
 from actions.action_own_use import ActionOwnUse
 
+
 class GameController:
     def __init__(self, player1_controller, player2_controller):
         self.player1_controller = player1_controller
@@ -39,7 +40,11 @@ class GameController:
 
             selected_action = first_player_controller.get_selected_action()
 
-            ActionController.apply_action(first_player_controller.player, second_player_controller.player, selected_action)
+            ActionController.apply_action(
+                first_player_controller.player,
+                second_player_controller.player,
+                selected_action,
+            )
 
             if not second_player_controller.player.is_alive():
                 print(self.get_formated_winer(first_player_controller.player))

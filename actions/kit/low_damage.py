@@ -1,5 +1,6 @@
 from ..action_enemy import ActionEnemy
 
+
 class LowDamage(ActionEnemy):
     def __init__(
         self,
@@ -8,4 +9,3 @@ class LowDamage(ActionEnemy):
         is_positive=False,
     ):
         super().__init__(name, value_range, is_positive)
-

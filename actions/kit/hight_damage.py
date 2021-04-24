@@ -1,5 +1,6 @@
 from ..action_enemy import ActionEnemy
 
+
 class HightDamage(ActionEnemy):
     def __init__(
         self,
