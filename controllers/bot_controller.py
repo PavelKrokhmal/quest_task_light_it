@@ -78,8 +78,3 @@ class BotController(BaseController):
             self.player.current_HP
             >= self.player.init_HP * self.CONST_NORMAL_HP_PERCENT / 100
         )
-
-    def apply_action(self, action):
-        action_value = action.get_random_value()
-        print("{0} points HP for {1}".format(action_value, "myself" if isinstance(action, ActionOwnUse) else "enemy"))
-        self.player.change_HP(action_value)

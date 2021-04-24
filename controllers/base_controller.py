@@ -8,6 +8,3 @@ class BaseController:
 
     def get_selected_action(self):
         raise NotImplementedError
-
-    def apply_action(self, action):
-        raise NotImplementedError

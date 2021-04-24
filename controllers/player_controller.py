@@ -26,8 +26,4 @@ class PlayerController(BaseController):
         
         return self.actions[int(wait_for_correct_key(" Your action: ", self.get_string_actions_keys()))]
 
-    def apply_action(self, action):
-        action_value = action.get_random_value()
-        print("{0} points HP for {1}".format(action_value, "myself" if isinstance(action, ActionOwnUse) else "enemy"))
-        self.player.change_HP(action_value)
 

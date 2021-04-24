@@ -1,4 +1,5 @@
 from balancer import Balancer
+from .action_controller import ActionController
 
 from actions.action_own_use import ActionOwnUse
 
@@ -38,13 +39,9 @@ class GameController:
 
             selected_action = first_player_controller.get_selected_action()
 
-            if isinstance(selected_action, ActionOwnUse):
-                first_player_controller.apply_action(selected_action)
-            else:
-                second_player_controller.apply_action(
-                    selected_action
-                )
-                if not second_player_controller.player.is_alive():
-                    print(self.get_formated_winer(first_player_controller.player))
-                    break
+            ActionController.apply_action(first_player_controller.player, second_player_controller.player, selected_action)
+
+            if not second_player_controller.player.is_alive():
+                print(self.get_formated_winer(first_player_controller.player))
+                break
             print("\n")
