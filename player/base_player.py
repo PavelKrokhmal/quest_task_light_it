@@ -1,3 +1,6 @@
+from utils import get_value_within_boundaries
+
+
 class BasePlayer:
     def __init__(self, name, HP):
         self.name = name
@@ -11,11 +14,6 @@ class BasePlayer:
         return "[{0}]: HP = {1}".format(self.name, self.current_HP)
 
     def change_HP(self, value):
-        new_current_HP = self.current_HP + value
-
-        if new_current_HP > self.init_HP:
-            self.current_HP = self.init_HP
-        elif new_current_HP < 0:
-            self.current_HP = 0
-        else:
-            self.current_HP = new_current_HP
+        self.current_HP = get_value_within_boundaries(
+            self.current_HP + value, 0, self.init_HP
+        )
