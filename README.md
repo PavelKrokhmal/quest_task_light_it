@@ -14,6 +14,6 @@ No 3-party packages
 
 ```
 $ git clone https://github.com/PavelKrokhmal/quest_task_light_it
-$ cd ../../quest_task_light_it
+$ cd ./quest_task_light_it
 $ python main.py
 ```
